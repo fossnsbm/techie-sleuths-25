@@ -24,7 +24,6 @@ export const RegistrationSection = () => {
    const [memberOne, setMemberOne] = useState<Member>({ name: "", studentId: "" });
    const [memberTwo, setMemberTwo] = useState<Member>({ name: "", studentId: "" });
    const [memberThree, setMemberThree] = useState<Member>({ name: "", studentId: "" });
-   const [memberFour, setMemberFour] = useState<Member>({ name: "", studentId: "" });
 
    // TODO: add UI for error and pending
    const [error, setError] = useState("");
@@ -55,11 +54,10 @@ export const RegistrationSection = () => {
       const members = [
         memberOne,
         memberTwo,
-        memberThree
       ];
 
-      if (memberFour.name != "" && memberFour.studentId != "") {
-        members.push(memberFour);
+      if (memberThree.name != "" && memberThree.studentId != "") {
+        members.push(memberThree);
       }
 
       try {
@@ -133,30 +131,65 @@ export const RegistrationSection = () => {
                         onChange={(e) => setLeaderEmail(e.target.value)}
                       />
                    </div>
-                   <h4 className="text-2xl mt-4">Member Information</h4>
-                   <div className="grid lg:grid-cols-3 gap-4">
-                      {Array.from({ length: 3 }).map((_, i) => (
-                        <div key={i} className="flex flex-col gap-4">
-                           <Input
-                              type="text"
-                              placeholder={`Name (Member ${i + 1})`}
-                              className="text-lg"
-                              value={memberOne.name}
-                              onChange={(e) => setMemberOne({ name: e.target.value, studentId: memberOne.studentId })}
-                           />
-                           <Input
-                              type="number"
-                              placeholder={`Student ID (Member ${i + 1})`}
-                              className="text-lg"
-                              value={memberOne.studentId}
-                              onChange={(e) => setMemberOne({ name: memberOne.name, studentId: e.target.value })}
-                           />
-                        </div>
-                      ))}
+                   <div>
+                     <h4 className="text-2xl mt-4">Member Information</h4>
+                     <i className="text-base">at-least 02 members required</i>
+                   </div>
+                   <div className="grid lg:grid-cols-4 gap-4">
+                    <div className="flex flex-col gap-4">
+                       <Input
+                          type="text"
+                          placeholder="Name (Member 1)"
+                          className="text-lg"
+                          value={memberOne.name}
+                          onChange={(e) => setMemberOne({ name: e.target.value, studentId: memberOne.studentId })}
+                       />
+                       <Input
+                          type="number"
+                          placeholder="Student ID (Member 1)"
+                          className="text-lg"
+                          value={memberOne.studentId}
+                          onChange={(e) => setMemberOne({ name: memberOne.name, studentId: e.target.value })}
+                       />
+                    </div>
+                    <div className="flex flex-col gap-4">
+                       <Input
+                          type="text"
+                          placeholder="Name (Member 2)"
+                          className="text-lg"
+                          value={memberTwo.name}
+                          onChange={(e) => setMemberTwo({ name: e.target.value, studentId: memberTwo.studentId })}
+                       />
+                       <Input
+                          type="number"
+                          placeholder="Student ID (Member 2)"
+                          className="text-lg"
+                          value={memberTwo.studentId}
+                          onChange={(e) => setMemberTwo({ name: memberTwo.name, studentId: e.target.value })}
+                       />
+                    </div>
+                    <div className="flex flex-col gap-4">
+                       <Input
+                          type="text"
+                          placeholder="Name (Member 3)"
+                          className="text-lg"
+                          value={memberThree.name}
+                          onChange={(e) => setMemberThree({ name: e.target.value, studentId: memberThree.studentId })}
+                       />
+                       <Input
+                          type="number"
+                          placeholder="Student ID (Member 3)"
+                          className="text-lg"
+                          value={memberThree.studentId}
+                          onChange={(e) => setMemberThree({ name: memberThree.name, studentId: e.target.value })}
+                       />
+                    </div>
                    </div>
                    <Button className="w-full font-bold text-2xl mt-4" onClick={submit}>Register</Button>
                 </form>
               </CardContent>
-           </Card></div></section>
+           </Card>
+        </div>
+    </section>
    );
 };
