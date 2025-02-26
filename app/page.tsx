@@ -1,8 +1,8 @@
-
 import { AchievementSection } from "@/components/layout/sections/achievement";
 import { CommunitySection } from "@/components/layout/sections/community";
 import { FAQSection } from "@/components/layout/sections/faq";
 import { HeroSection } from "@/components/layout/sections/hero";
+import { RegistrationSection } from "@/components/layout/sections/registration";
 
 export const metadata = {
   title: "Techie Sleuths",
@@ -28,6 +28,7 @@ export default function Home() {
     <>
       <HeroSection /> 
       <AchievementSection />
+      <RegistrationSection />
       <CommunitySection />
       <FAQSection />
      
