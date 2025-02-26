@@ -3,6 +3,7 @@ import FloatingImage from "@/components/FloatingImage";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Countdown } from "@/components/ui/countdown";
+import Snitch from "@/components/ui/snitch";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -14,8 +15,10 @@ export const HeroSection = () => {
   
   return (
     <section className="container w-full">
+
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-12">
         <div className="text-center space-y-8">
+        
           <Badge variant="outline" className="text-lg py-2">
             <span className="mr-2 text-primary">
               <Badge>New</Badge>
@@ -24,6 +27,7 @@ export const HeroSection = () => {
           </Badge>
 
           <div className="max-w-screen-md mx-auto text-center text-[2.342rem] md:text-[4.645rem] font-extrabold">
+          <Snitch />
             <h1>
               Experience the
               <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">

@@ -146,7 +146,7 @@ html {
   box-shadow: inset 0 0 10px rgba(173, 216, 230, 0.3); /* Mystic Blue */
 }
 
-/* Apply Theme */
+
 @layer base {
   * {
     @apply border-border;
@@ -155,3 +155,5 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+
