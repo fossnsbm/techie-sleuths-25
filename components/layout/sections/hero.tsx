@@ -2,6 +2,7 @@
 import FloatingImage from "@/components/FloatingImage";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Countdown } from "@/components/ui/countdown";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -36,6 +37,8 @@ export const HeroSection = () => {
           <p className="max-w-screen-sm mx-auto text-[1.334rem] md:text-[1.734rem]  text-muted-foreground ">
             {`Unravel the clues, chase the mystery, and discover the treasure that awaits. Adventure begins here!`}
           </p>
+
+          <Countdown />
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
             <Button className="w-5/6 md:w-1/2 font-bold group/arrow md:h-14 text-2xl" onClick={() => window.location.href = "#register"}>
