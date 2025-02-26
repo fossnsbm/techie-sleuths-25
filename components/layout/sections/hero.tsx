@@ -50,7 +50,7 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="relative group mt-14">
+        <div className="relative group md:mt-14 mt-2 ">
           <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/50 rounded-full blur-3xl"></div>
           <FloatingImage src="/sss.png" alt="Floating Image" />
 

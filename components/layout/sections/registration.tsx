@@ -1,43 +1,78 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Icon } from "@/components/ui/icon";
-import { icons } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import Image from "next/image";
 
 export const RegistrationSection = () => {
+  
   return (
-    <section id="register" className="container py-24 sm:py-32">
-      <div className="flex flex-col items-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Registration</h2>
-        <div className="flex flex-col w-full p-4 mx-[20%] gap-4">
-            <input className="p-4 outline-none" type="text" placeholder="Team name" />
-            <input className="p-4 outline-none" type="text" placeholder="Leader's name" />
-            <input className="p-4 outline-none" type="tel" placeholder="Leader's Contact No." />
-            <input className="p-4 outline-none" type="number" placeholder="Leader's SID" />
-            <input className="p-4 outline-none" type="email" placeholder="Leader's Email" />
-            <h4 className="text-2xl">Member Information</h4>
-            <div className="grid lg:grid-cols-4 gap-4">
-                <div className="flex flex-col gap-4">
-                    <input className="p-4 outline-none" type="text" placeholder="Name (Member 1)" />
-                    <input className="p-4 outline-none" type="number" placeholder="Student ID (Member 1)" />
-                </div>
-                <div className="flex flex-col gap-4">
-                    <input className="p-4 outline-none" type="text" placeholder="Name (Member 2)" />
-                    <input className="p-4 outline-none" type="number" placeholder="Student ID (Member 2)" />
-                </div>
-                <div className="flex flex-col gap-4">
-                    <input className="p-4 outline-none" type="text" placeholder="Name (Member 3)" />
-                    <input className="p-4 outline-none" type="number" placeholder="Student ID (Member 3)" />
-                </div>
-                <div className="flex flex-col gap-4">
-                    <input className="p-4 outline-none" type="text" placeholder="Name (Member 4)" />
-                    <input className="p-4 outline-none" type="number" placeholder="Student ID (Member 4)" />
-                </div>
-            </div>
+    <section id="register" className="container py-2 md:py-32 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="flex justify-center relative">
+          <Image
+            src="/ha.png"
+            alt="Register for the Competition"
+            width={500}
+            height={500}
+            className="rounded-lg shadow-lg opacity-80 hover:opacity-90"
+          />
+          <div className="absolute bottom-2 lg:top-96 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-32 bg-primary/50 rounded-full blur-3xl"></div>
         </div>
-        <Button className="w-5/6 md:w-1/3 font-bold group/arrow md:h-14 text-2xl self-center mt-4">
-            Submit
-        </Button>
+        <Card className="w-full bg-muted/60 dark:bg-card">
+          <CardHeader className="text-primary text-[2.230rem] text-center">
+            Register
+          </CardHeader>
+          <CardContent>
+          <form className="grid w-full gap-4 text-xl">
+  <div className="flex flex-col gap-4">
+    <Input 
+      type="text" 
+      placeholder="Team name" 
+      className="text-lg" 
+    />
+    <Input 
+      type="text" 
+      placeholder="Leader's name" 
+      className="text-lg" 
+    />
+    <Input 
+      type="tel" 
+      placeholder="Leader's Contact No." 
+      className="text-lg" 
+    />
+    <Input 
+      type="number" 
+      placeholder="Leader's SID" 
+      className="text-lg" 
+    />
+    <Input 
+      type="email" 
+      placeholder="Leader's Email" 
+      className="text-lg" 
+    />
+  </div>
+  <h4 className="text-2xl mt-4">Member Information</h4>
+  <div className="grid lg:grid-cols-3 gap-4">
+    {Array.from({ length: 3 }).map((_, i) => (
+      <div key={i} className="flex flex-col gap-4">
+        <Input 
+          type="text" 
+          placeholder={`Name (Member ${i + 1})`} 
+          className="text-lg" 
+        />
+        <Input 
+          type="number" 
+          placeholder={`Student ID (Member ${i + 1})`} 
+          className="text-lg" 
+        />
+      </div>
+    ))}
+  </div>
+  <Button className="w-full font-bold text-2xl mt-4">Register</Button>
+</form>
+
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

@@ -33,7 +33,12 @@ export const CommunitySection = () => {
 
             <CardFooter>
               <Button asChild>
-                <a href="" target="_blank">
+              <a
+               href="https://chat.whatsapp.com/CwI2q3ZsSx31YXoyu5Pgn2" 
+             target="_blank"
+              rel="noopener noreferrer"
+                 className="text-center"
+                       >
                   Join WhatsApp
                 </a>
               </Button>

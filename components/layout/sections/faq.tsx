@@ -18,9 +18,8 @@ const FAQList: FAQProps[] = [
     value: "item-1",
   },
   {
-    question: "Who can participate?",
-    answer:
-      "The event is open to all freshers of the Faculty of Computing. It is a great opportunity to meet new people, make friends, and learn more about the faculty.",
+    question:"What are the team requirements for the event? ",
+    answer: "Each team must have a minimum of 3 members and a maximum of 4 members. Make sure to form your team within these limits before registering for the event!",
     value: "item-2",
   },
   {
@@ -45,6 +44,13 @@ const FAQList: FAQProps[] = [
     answer: "For any queries, feel free to reach out to the organizing team via the contact details on our website.",
     value: "item-6",
   },
+  {
+    question: "Who can participate?",
+    answer:
+      "The event is open to all freshers of the Faculty of Computing. It is a great opportunity to meet new people, make friends, and learn more about the faculty.",
+    value: "item-2",
+  },
+
 ];
 
 export const FAQSection = () => {

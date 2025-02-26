@@ -33,7 +33,7 @@ export const Countdown = () => {
     }, [])
 
     return (
-        <div className="grid grid-cols-4 grid-rows-2 lg:text-4xl text-3xl lg:w-2/3 w-full lg:mx-auto">
+        <div className="grid grid-cols-4 grid-rows-2 lg:text-4xl text-2xl lg:w-2/3 w-full lg:mx-auto">
             <span ref={daysRef}>00</span>
             <span ref={hoursRef}>00</span>
             <span ref={minutesRef}>00</span>

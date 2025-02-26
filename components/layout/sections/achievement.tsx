@@ -38,7 +38,7 @@ const benefitList: BenefitsProps[] = [
 
 export const AchievementSection = () => {
   return (
-    <section id="benefits" className="container py-24 sm:py-32">
+    <section id="benefits" className="container py-12 md:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>
           <h2 className="text-lg text-primary mb-2 tracking-wider">Achievement</h2>
