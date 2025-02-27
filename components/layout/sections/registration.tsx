@@ -152,13 +152,8 @@ export const RegistrationSection = () => {
                    </div>
                    <div>
                      <h4 className="text-2xl mt-4">Member Information</h4>
-                     <div className="flex flex-col gap-2">
-                     <i className="text-base text-red-600 opacity-80">At-least 02 members required.</i>
-                     <i className="text-base text-red-600 opacity-80">Team Leaders should register using their NSBM Mail.</i>
-                     </div>
-                    
                    </div>
-                   <div className="grid lg:grid-cols-4 gap-4">
+                   <div className="grid lg:grid-cols-3 gap-4">
                     <div className="flex flex-col gap-4">
                        <Input
                           type="text"
@@ -208,6 +203,10 @@ export const RegistrationSection = () => {
                        />
                     </div>
                    </div>
+                 <div className="flex flex-col mt-4">
+                     <i className="text-base text-red-400">*At-least 02 members are required.</i>
+                     <i className="text-base text-red-400">*Team Leaders should register using their NSBM email.</i>
+                 </div>
                    <Button className="w-full font-bold text-2xl mt-4" onClick={submit}>
                     <span>Register</span>
                     {pending && <Loader className="ml-4 animate-spin" />}
