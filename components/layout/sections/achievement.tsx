@@ -47,9 +47,7 @@ export const AchievementSection = () => {
             Your Shortcut to Success
           </h2>
           <p className="text-xl md:text-2xl  text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
+          Where creativity fuels teamwork, inspiring the future of open-source trailblazers!
           </p>
          
         </div>
