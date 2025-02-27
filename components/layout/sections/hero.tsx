@@ -57,6 +57,7 @@ export const HeroSection = () => {
         <div className="relative group md:mt-14 mt-2 ">
           <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/50 rounded-full blur-3xl"></div>
           <FloatingImage src="/sss.png" alt="Floating Image" />
+         
 
           <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
         </div>
