@@ -32,7 +32,6 @@ export default function Home() {
       <RegistrationSection />
       <CommunitySection />
       <FAQSection />
-     
     </>
   );
 }

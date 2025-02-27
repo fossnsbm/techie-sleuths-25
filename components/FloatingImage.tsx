@@ -27,7 +27,7 @@ export default function FloatingImage({ src, alt, width = 1200, height = 1200 }:
   }, []);
 
   return (
-    <div ref={imgRef} className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30">
+    <div ref={imgRef} className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center">
       <Image 
       
       src={src} alt={alt} width={width} height={height} />

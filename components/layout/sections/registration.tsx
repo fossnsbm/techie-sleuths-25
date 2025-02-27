@@ -33,6 +33,7 @@ export const RegistrationSection = () => {
         return diff <= 0;
    }, []);
 
+
    async function submit() {
       if (teamName == "" || leaderName == "" || leaderContact == "" || leaderSid == "" || leaderEmail == "") {
         setError("Please fill in all required fields");
@@ -44,13 +45,22 @@ export const RegistrationSection = () => {
         return;
       }
 
-      if (memberOne.name == "" ||
-          memberOne.studentId == "" ||
-          memberTwo.name == "" ||
-          memberTwo.studentId == "" ||
-          memberThree.name == "" ||
-          memberThree.studentId == "") {
-        setError("At-least 03 members are required");
+      const members = [];
+
+      if (memberOne.name != "" && memberOne.studentId != "") {
+        members.push(memberOne);
+      }
+
+      if (memberTwo.name != "" && memberTwo.studentId != "") {
+        members.push(memberTwo);
+      }
+
+      if (memberThree.name != "" && memberThree.studentId != "") {
+        members.push(memberThree);
+      }
+
+      if (members.length < 2) {
+        setError("At-least 02 members are required");
         return;
       }
 
@@ -60,15 +70,6 @@ export const RegistrationSection = () => {
         studentId: leaderSid,
         email: leaderEmail,
       };
-
-      const members = [
-        memberOne,
-        memberTwo,
-      ];
-
-      if (memberThree.name != "" && memberThree.studentId != "") {
-        members.push(memberThree);
-      }
 
       try {
         setPending(true);
@@ -129,18 +130,18 @@ export const RegistrationSection = () => {
                         onChange={(e) => setLeaderName(e.target.value)}
                       />
                       <Input
-                        type="tel"
+                        type="text"
                         placeholder="Leader's Contact No."
                         className="text-lg"
                         value={leaderContact}
-                        onChange={(e) => setLeaderContact(e.target.value)}
+                        onChange={(e) => setLeaderContact(e.target.value.replaceAll(/[^\d+]/g, ""))}
                       />
                       <Input
-                        type="number"
+                        type="text"
                         placeholder="Leader's SID"
                         className="text-lg"
                         value={leaderSid}
-                        onChange={(e) => setLeaderSid(e.target.value)}
+                        onChange={(e) => setLeaderSid(e.target.value.replaceAll(/[^\d+]/g, ""))}
                       />
                       <Input
                         type="email"
@@ -163,11 +164,11 @@ export const RegistrationSection = () => {
                           onChange={(e) => setMemberOne({ name: e.target.value, studentId: memberOne.studentId })}
                        />
                        <Input
-                          type="number"
+                          type="text"
                           placeholder="Student ID (Member 1)"
                           className="text-lg"
                           value={memberOne.studentId}
-                          onChange={(e) => setMemberOne({ name: memberOne.name, studentId: e.target.value })}
+                          onChange={(e) => setMemberOne({ name: memberOne.name, studentId: e.target.value.replaceAll(/[^\d+]/g, "") })}
                        />
                     </div>
                     <div className="flex flex-col gap-4">
@@ -179,11 +180,11 @@ export const RegistrationSection = () => {
                           onChange={(e) => setMemberTwo({ name: e.target.value, studentId: memberTwo.studentId })}
                        />
                        <Input
-                          type="number"
+                          type="text"
                           placeholder="Student ID (Member 2)"
                           className="text-lg"
                           value={memberTwo.studentId}
-                          onChange={(e) => setMemberTwo({ name: memberTwo.name, studentId: e.target.value })}
+                          onChange={(e) => setMemberTwo({ name: memberTwo.name, studentId: e.target.value.replaceAll(/[^\d+]/g, "") })}
                        />
                     </div>
                     <div className="flex flex-col gap-4">
@@ -195,11 +196,11 @@ export const RegistrationSection = () => {
                           onChange={(e) => setMemberThree({ name: e.target.value, studentId: memberThree.studentId })}
                        />
                        <Input
-                          type="number"
+                          type="text"
                           placeholder="Student ID (Member 3)"
                           className="text-lg"
                           value={memberThree.studentId}
-                          onChange={(e) => setMemberThree({ name: memberThree.name, studentId: e.target.value })}
+                          onChange={(e) => setMemberThree({ name: memberThree.name, studentId: e.target.value.replaceAll(/[^\d+]/g, "") })}
                        />
                     </div>
                    </div>

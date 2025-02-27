@@ -48,7 +48,7 @@ const FAQList: FAQProps[] = [
     question: "Who can participate?",
     answer:
       "The event is open to all freshers of the Faculty of Computing. It is a great opportunity to meet new people, make friends, and learn more about the faculty.",
-    value: "item-2",
+    value: "item-7",
   },
 
 ];
@@ -69,10 +69,9 @@ export const FAQSection = () => {
       <Accordion type="single" collapsible className="AccordionRoot">
         {FAQList.map(({ question, answer, value }) => (
           <AccordionItem key={value} value={value}>
-            <AccordionTrigger className="text-left md:text-xl">
+            <AccordionTrigger className="text-left md:text-xl" >
               {question}
             </AccordionTrigger>
-
             <AccordionContent className="text-xl">{answer}</AccordionContent>
           </AccordionItem>
         ))}
