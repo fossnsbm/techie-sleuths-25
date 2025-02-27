@@ -22,7 +22,7 @@ export const FooterSection = () => {
         </div>
 
         <Separator className="my-6" />
-        <section className="">
+        <section className="flex justify-between">
           <h3 className="">
             &copy; Developed by
             <Link
@@ -33,8 +33,26 @@ export const FooterSection = () => {
               NSBM FOSS Community
             </Link>
           </h3>
+
+<div className="flex flex-wrap justify-center gap-4 mt-8 md:mt-0"> <a href="https://icons8.com/icons/set/github" className="flex items-center gap-2"> <img src="https://img.icons8.com/?size=100&amp;id=62856&amp;format=png&amp;color=ffffff" width="25" alt="Github"/>
+Github
+</a> <a href="https://icons8.com/icons/set/github" className="flex items-center gap-2"> <img src="https://img.icons8.com/?size=100&amp;id=111056&amp;format=png&amp;color=ffffff" width="25" alt="X"/>
+X
+</a> <a href="https://icons8.com/icons/set/github" className="flex items-center gap-2"> <img src="https://img.icons8.com/?size=100&amp;id=98960&amp;format=png&amp;color=ffffff" width="25" alt="LinkedIn"/>
+LinkedIn
+</a> <a href="https://icons8.com/icons/set/github" className="flex items-center gap-2"> <img src="https://img.icons8.com/?size=100&amp;id=37325&amp;format=png&amp;color=ffffff" width="25" alt="Youtube"/>
+Youtube
+</a> <a href="https://icons8.com/icons/set/github" className="flex items-center gap-2"> <img src="https://img.icons8.com/?size=100&amp;id=118467&amp;format=png&amp;color=ffffff" width="25" alt="Facebook"/>
+Facebook
+</a> <a href="https://icons8.com/icons/set/github" className="flex items-center gap-2"> <img src="https://img.icons8.com/?size=100&amp;id=XVNvUWCvvlD9&amp;format=png&amp;color=ffffff" width="25" alt="Medium"/>
+Medium
+</a> <a href="https://icons8.com/icons/set/github" className="flex items-center gap-2"> <img src="https://img.icons8.com/?size=100&amp;id=32309&amp;format=png&amp;color=ffffff" width="25" alt="Instagram"/>
+Instagram
+</a> </div>
         </section>
       </div>
+
+
     </footer>
   );
 };
