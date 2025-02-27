@@ -125,7 +125,7 @@ export const RegistrationSection = () => {
                       />
                       <Input
                         type="email"
-                        placeholder="Leader's Email"
+                        placeholder="Leader's NSBM Email"
                         className="text-lg"
                         value={leaderEmail}
                         onChange={(e) => setLeaderEmail(e.target.value)}
@@ -133,7 +133,11 @@ export const RegistrationSection = () => {
                    </div>
                    <div>
                      <h4 className="text-2xl mt-4">Member Information</h4>
-                     <i className="text-base">at-least 02 members required</i>
+                     <div className="flex flex-col gap-2">
+                     <i className="text-base text-red-600 opacity-80">At-least 02 members required.</i>
+                     <i className="text-base text-red-600 opacity-80">Team Leaders should register using their NSBM Mail.</i>
+                     </div>
+                    
                    </div>
                    <div className="grid lg:grid-cols-4 gap-4">
                     <div className="flex flex-col gap-4">

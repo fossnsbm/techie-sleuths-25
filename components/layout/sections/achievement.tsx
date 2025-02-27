@@ -14,25 +14,25 @@ const benefitList: BenefitsProps[] = [
     icon: "Blocks",
     title: "Work As a Team",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Alone, we can accomplish small tasks, but together as a team, we can overcome challenges, innovate, and achieve greatness beyond what we ever imagined.",
   },
   {
     icon: "LineChart",
     title: "Collaborate effectively",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Effective collaboration thrives on trust, communication, and shared goals—when we work together, we achieve more than we ever could alone.",
   },
   {
     icon: "Clock",
     title: "Manage Your Time",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Manage your time wisely—prioritize what matters, stay focused, and turn every moment into a step toward success.",
   },
   {
     icon: "Trophy",
     title: "Achieve Goals Together",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Success is not just about individual effort; it's about supporting, inspiring, and pushing each other forward to achieve our goals together.",
   },
 ];
 
