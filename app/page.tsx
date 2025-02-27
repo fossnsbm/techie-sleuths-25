@@ -7,7 +7,7 @@ import { RegistrationSection } from "@/components/layout/sections/registration";
 
 export const metadata = {
   title: "Techie Sleuths",
-  description: "Free Shadcn landing page for developers",
+  description: "Techie Sleuths",
   openGraph: {
     type: "website",
     title: "Techie Sleuths website",
