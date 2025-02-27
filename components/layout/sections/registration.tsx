@@ -6,13 +6,13 @@ import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { db } from "@/lib/firebase";
 import { addDoc, collection } from "firebase/firestore"
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { AlertTriangle, Check, Loader, X } from "lucide-react";
 
 type Member = {
    name: string;
    studentId: string;
 };
-
 
 export const RegistrationSection = () => {
    const [teamName, setTeamName] = useState("");
@@ -25,24 +25,34 @@ export const RegistrationSection = () => {
    const [memberTwo, setMemberTwo] = useState<Member>({ name: "", studentId: "" });
    const [memberThree, setMemberThree] = useState<Member>({ name: "", studentId: "" });
 
-   // TODO: add UI for error and pending
    const [error, setError] = useState("");
    const [pending, setPending] = useState(false);
 
-   async function submit() {
-      if ((memberOne.name == "" || memberOne.studentId == "") &&
-        (memberTwo.name == "" || memberTwo.studentId == "") &&
-        (memberThree.name == "" || memberThree.studentId == "")) {
-        setError("At-least 03 members are required");
-        return;
-      }
+   const hasTimedOut = useMemo(() => {
+        let diff = new Date("2025-03-04T00:00:00").getTime() - Date.now();
+        return diff <= 0;
+   }, []);
 
+   async function submit() {
       if (teamName == "" || leaderName == "" || leaderContact == "" || leaderSid == "" || leaderEmail == "") {
         setError("Please fill in all required fields");
         return;
       }
 
-      //TODO: more validation
+      if (leaderEmail.split("@")[1] != "students.nsbm.ac.lk") {
+        setError("Please enter your NSBM email address");
+        return;
+      }
+
+      if (memberOne.name == "" ||
+          memberOne.studentId == "" ||
+          memberTwo.name == "" ||
+          memberTwo.studentId == "" ||
+          memberThree.name == "" ||
+          memberThree.studentId == "") {
+        setError("At-least 03 members are required");
+        return;
+      }
 
       const leader = {
         name: leaderName,
@@ -68,12 +78,22 @@ export const RegistrationSection = () => {
            members,
         })
         setPending(false);
+        setError("");
+        document.getElementById("success")!.showPopover();
       } catch (e) {
         console.error(e);
-        setError(e != null && e.toString && e.toString() || "Unknown error");
         setPending(false);
+        setError(e != null && e.toString && e.toString() || "Unknown error");
       }
    }
+
+   useEffect(() => {
+       if (error) {
+        document.getElementById("error")!.showPopover();
+       } else {
+        document.getElementById("error")!.hidePopover();
+       }
+   }, [error]);
 
    return (
       <section id="register" className="container py-2 md:py-32 ">
@@ -92,8 +112,7 @@ export const RegistrationSection = () => {
               <CardHeader className="text-primary text-[2.230rem] text-center">
                 Register
               </CardHeader>
-              <CardContent>
-                <form className="grid w-full gap-4 text-xl">
+              <CardContent className={hasTimedOut ? "pointer-events-none opacity-50" : ""}>
                    <div className="flex flex-col gap-4">
                       <Input
                         type="text"
@@ -133,13 +152,8 @@ export const RegistrationSection = () => {
                    </div>
                    <div>
                      <h4 className="text-2xl mt-4">Member Information</h4>
-                     <div className="flex flex-col gap-2">
-                     <i className="text-base text-red-600 opacity-80">At-least 02 members required.</i>
-                     <i className="text-base text-red-600 opacity-80">Team Leaders should register using their NSBM Mail.</i>
-                     </div>
-                    
                    </div>
-                   <div className="grid lg:grid-cols-4 gap-4">
+                   <div className="grid lg:grid-cols-3 gap-4">
                     <div className="flex flex-col gap-4">
                        <Input
                           type="text"
@@ -189,8 +203,26 @@ export const RegistrationSection = () => {
                        />
                     </div>
                    </div>
-                   <Button className="w-full font-bold text-2xl mt-4" onClick={submit}>Register</Button>
-                </form>
+                 <div className="flex flex-col mt-4">
+                     <i className="text-base text-red-400">*At-least 02 members are required.</i>
+                     <i className="text-base text-red-400">*Team Leaders should register using their NSBM email.</i>
+                 </div>
+                   <Button className="w-full font-bold text-2xl mt-4" onClick={submit}>
+                    <span>Register</span>
+                    {pending && <Loader className="ml-4 animate-spin" />}
+                   </Button>
+                   <div id="success" className="bg-transparent shadow-lg p-0 backdrop:bg-neutral-800/50" popover="">
+                    <Card className="p-4 inline-flex gap-4">
+                      <Check/>
+                      <span>Thank you for registering!</span>
+                    </Card>
+                   </div>
+                   <div id="error" className="bg-transparent shadow-lg p-0 backdrop:bg-neutral-800/50" popover="">
+                    <Card className="p-4 inline-flex gap-4">
+                      <AlertTriangle />
+                      <span>{error}</span>
+                    </Card>
+                   </div>
               </CardContent>
            </Card>
         </div>
