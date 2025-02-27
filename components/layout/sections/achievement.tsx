@@ -68,7 +68,7 @@ export const AchievementSection = () => {
                     color="hsl(var(--primary))"
                     className="mb-6 text-primary"
                   />
-                  <span className="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30">
+                  <span className="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/70">
                     0{index + 1}
                   </span>
                 </div>
