@@ -1,36 +1,44 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 interface FloatingImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
+	src: string;
+	alt: string;
+	width?: number;
+	height?: number;
 }
 
-export default function FloatingImage({ src, alt, width = 1200, height = 1200 }: FloatingImageProps) {
-  const imgRef = useRef<HTMLDivElement | null>(null);
+export default function FloatingImage({
+	src,
+	alt,
+	width = 1200,
+	height = 12000,
+}: FloatingImageProps) {
+	const imgRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    if (imgRef.current) {
-      gsap.to(imgRef.current, {
-        y: 20,
-        repeat: -1,
-        yoyo: true,
-        duration: 2,
-        ease: "power1.inOut",
-      });
-    }
-  }, []);
+	useEffect(() => {
+		if (imgRef.current) {
+			gsap.to(imgRef.current, {
+				y: 20,
+				repeat: -1,
+				yoyo: true,
+				duration: 2,
+				ease: "power1.inOut",
+			});
+		}
+	}, []);
 
-  return (
-    <div ref={imgRef} className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center">
-      <Image 
-      
-      src={src} alt={alt} width={width} height={height} />
-    </div>
-  );
+	return (
+		<div
+			ref={imgRef}
+			className="w-full mx-auto relative rounded-lg leading-none flex items-center"
+		>
+			<div className="relative w-[1200px]  max-w-[85vw] aspect-video ">
+				<Image src={src} alt={alt} layout="fill" />
+			</div>
+		</div>
+	);
 }
