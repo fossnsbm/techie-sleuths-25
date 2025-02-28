@@ -1,11 +1,9 @@
 "use client";
 import FloatingImage from "@/components/FloatingImage";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Countdown } from "@/components/ui/countdown";
-import { ArrowRight } from "lucide-react";
-import { useTheme } from "next-themes";
 import Snitch from "@/components/ui/snitch";
+import { useTheme } from "next-themes";
 
 export const HeroSection = () => {
 	const { theme } = useTheme();
