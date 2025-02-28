@@ -20,7 +20,8 @@ export default function UpperHero() {
 						</div>
 
 						<div className="text-xl md:text-2xl text-muted-foreground text-center flex">
-							Where creativity fuels teamwork, inspiring the future of open-source trailblazers!
+							Where creativity fuels teamwork, inspiring the future of
+							open-source trailblazers!
 						</div>
 
 						<div className="flex justify-center items-center ">
@@ -32,32 +33,29 @@ export default function UpperHero() {
                 <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-4 transition-transform" />
                 </Button> */}
 							<div className="flex items-center">
-								{/* Left Triangle */}
 								<div
 									className="w-0 h-0 border-t-transparent border-b-transparent border-r-primary/80 group-hover:border-r-primary/90"
 									style={{
-										borderTopWidth: '25px',
-										borderBottomWidth: '25px',
-										borderRightWidth: '25px'
+										borderTopWidth: "25px",
+										borderBottomWidth: "25px",
+										borderRightWidth: "25px",
 									}}
 								/>
 
-								{/* Button */}
 								<Button
 									className="bg-primary/80 group/arrow py-6 px-6 h-10 text-2xl rounded-none"
-									onClick={() => (window.location.href = '#register')}
+									onClick={() => (window.location.href = "#register")}
 								>
-									Click Me
+									Register Now
 									<ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-4 transition-transform" />
 								</Button>
 
-								{/* Right Triangle */}
 								<div
 									className="w-0 h-0 border-t-transparent border-b-transparent border-l-primary/80 group-hover:border-l-primary/90"
 									style={{
-										borderTopWidth: '25px',
-										borderBottomWidth: '25px',
-										borderLeftWidth: '25px'
+										borderTopWidth: "25px",
+										borderBottomWidth: "25px",
+										borderLeftWidth: "25px",
 									}}
 								/>
 							</div>

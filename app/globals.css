@@ -13,7 +13,7 @@ body {
 /* *=========== Refined Hogwarts Theme (No Green) =========== */
 
 @layer base {
-     :root {
+    :root {
         --background: 38 78% 93%;
         /* Aged Parchment */
         --foreground: 240 100% 15%;
