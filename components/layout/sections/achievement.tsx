@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { icons } from "lucide-react";
-import Image from "next/image";
 
 interface BenefitsProps {
   icon: string;
@@ -41,7 +40,7 @@ export const AchievementSection = () => {
     <section id="benefits" className="container py-12 md:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>
-          <h2 className="text-lg text-primary mb-2 tracking-wider">Achievement</h2>
+          <h2 className="text-3xl text-primary mb-2 tracking-wider">Achievement</h2>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Your Shortcut to Success
@@ -66,7 +65,7 @@ export const AchievementSection = () => {
                     color="hsl(var(--primary))"
                     className="mb-6 text-primary"
                   />
-                  <span className="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/70">
+                  <span className="text-5xl text-muted-foreground/60 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/100">
                     0{index + 1}
                   </span>
                 </div>
@@ -74,7 +73,7 @@ export const AchievementSection = () => {
                 <CardTitle>{title}</CardTitle>
               </CardHeader>
 
-              <CardContent className="text-muted-foreground text-lg">
+              <CardContent className="text-muted-foreground text-xl">
                 {description}
               </CardContent>
             </Card>

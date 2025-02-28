@@ -1,13 +1,13 @@
+import { ThemeProvider } from "@/components/layout/theme-provider";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Henny_Penny } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/layout/theme-provider";
-const inter = Henny_Penny({ subsets: ["latin"], weight: "400" });
 import localFont from 'next/font/local';
+import "./globals.css";
+const inter = Henny_Penny({ subsets: ["latin"], weight: "400" });
 
 const myFont = localFont({
-  src: '../public/fonts/HarryP.ttf',
+  src: '../public/fonts/MagicOwlPersonalUse-WyO0O.otf',
   weight: '700',
   style: 'normal',
 });

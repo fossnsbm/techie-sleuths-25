@@ -10,7 +10,7 @@ import {
 export const CommunitySection = () => {
   return (
     <section id="community" className="py-12 ">
-      <hr className="border-secondary" />
+      {/* <hr className="border-secondary" /> */}
       <div className="container py-20 sm:py-20">
         <div className="lg:w-[60%] mx-auto">
           <Card className="bg-background border-none shadow-none text-center flex flex-col items-center justify-center">
@@ -32,12 +32,12 @@ export const CommunitySection = () => {
             </CardContent>
 
             <CardFooter>
-              <Button asChild>
+              <Button asChild className="text-2xl">
               <a
                href="https://chat.whatsapp.com/CwI2q3ZsSx31YXoyu5Pgn2" 
              target="_blank"
               rel="noopener noreferrer"
-                 className="text-center"
+                 className="text-center "
                        >
                   Join WhatsApp
                 </a>
@@ -46,7 +46,7 @@ export const CommunitySection = () => {
           </Card>
         </div>
       </div>
-      <hr className="border-secondary" />
+      {/* <hr className="border-secondary" /> */}
     </section>
   );
 };

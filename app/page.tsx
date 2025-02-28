@@ -4,6 +4,7 @@ import { FAQSection } from "@/components/layout/sections/faq";
 import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
 import { RegistrationSection } from "@/components/layout/sections/registration";
+import UpperHero from "@/components/layout/sections/upperhero";
 
 export const metadata = {
   title: "Techie Sleuths",
@@ -21,13 +22,14 @@ export const metadata = {
         alt: "Techie Sleuths - FOSS NSBM",
       },
     ],
-  } 
+  }
 };
 
 export default function Home() {
   return (
     <>
-      <HeroSection /> 
+      <UpperHero/>
+      <HeroSection />
       <AchievementSection />
       <RegistrationSection />
       <CommunitySection />
