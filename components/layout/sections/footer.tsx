@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const FooterSection = () => {
   return (
-    <footer id="footer" className="container py-24 sm:py-32">
+    <footer id="footer" className="container py-7 ">
       <div className="p-10 bg-card border border-secondary rounded-2xl">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div className="flex flex-col items-center md:items-start">

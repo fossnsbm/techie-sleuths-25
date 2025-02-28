@@ -27,14 +27,14 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <>
-      <UpperHero/>
+    <div className="space-y-20"> 
+      <UpperHero />
       <HeroSection />
       <AchievementSection />
       <RegistrationSection />
       <CommunitySection />
       <FAQSection />
       <FooterSection />
-    </>
+    </div>
   );
 }

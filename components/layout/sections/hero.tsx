@@ -3,7 +3,6 @@ import FloatingImage from "@/components/FloatingImage";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Countdown } from "@/components/ui/countdown";
-import Snitch from "@/components/ui/snitch";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -25,7 +24,7 @@ export const HeroSection = () => {
           </Badge>
 
           <div className="max-w-screen-md mx-auto text-center text-[2.342rem] md:text-[4.645rem] font-extrabold">
-          <Snitch />
+          <Snitc55h />
             <h1>
               Experience the
               <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">

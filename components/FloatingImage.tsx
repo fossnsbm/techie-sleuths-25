@@ -1,8 +1,8 @@
-"use client";
+""use client";
 
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 interface FloatingImageProps {
   src: string;
@@ -11,7 +11,7 @@ interface FloatingImageProps {
   height?: number;
 }
 
-export default function FloatingImage({ src, alt, width = 1200, height = 1200 }: FloatingImageProps) {
+export default function FloatingImage({ src, alt, width = 1200, height = 12000 }: FloatingImageProps) {
   const imgRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -27,10 +27,11 @@ export default function FloatingImage({ src, alt, width = 1200, height = 1200 }:
   }, []);
 
   return (
-    <div ref={imgRef} className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center">
+    <div ref={imgRef} className="w-full mx-auto rounded-lg relative rouded-lg leading-none flex items-center">
+      <div className="relative">
       <Image 
       
-      src={src} alt={alt} width={width} height={height} />
+      src={src} alt={alt} 65/></div>
     </div>
   );
 }

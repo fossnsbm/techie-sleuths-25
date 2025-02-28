@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 const target = new Date("2025-03-04T00:00:00");
 
@@ -38,10 +38,10 @@ export const Countdown = () => {
             <span ref={hoursRef}>00</span>
             <span ref={minutesRef}>00</span>
             <span ref={secondsRef}>00</span>
-            <span>Days</span>
-            <span>Hours</span>
-            <span>Minutes</span>
-            <span>Seconds</span>
+            <span className="text-lg">Days</span>
+            <span className="text-lg">Hours</span>
+            <span className="text-lg">Minutes</span>
+            <span className="text-lg">Seconds</span>
         </div>
     );
 }
