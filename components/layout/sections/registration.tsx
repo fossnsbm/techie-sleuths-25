@@ -42,6 +42,17 @@ export const RegistrationSection = () => {
 		return diff <= 0;
 	}, []);
 
+   async function reset() {
+       setTeamName("");
+       setLeaderName("");
+       setLeaderContact("");
+       setLeaderSid("");
+       setLeaderEmail("");
+       setMemberOne({ name: "", studentId: "" });
+       setMemberTwo({ name: "", studentId: "" });
+       setMemberThree({ name: "", studentId: "" });
+   }
+
 	async function submit() {
 		if (
 			teamName == "" ||
@@ -94,6 +105,7 @@ export const RegistrationSection = () => {
 			});
 			setPending(false);
 			setError("");
+            reset();
 			document.getElementById("success")!.showPopover();
 		} catch (e) {
 			console.error(e);
