@@ -3,6 +3,7 @@ import { CommunitySection } from "@/components/layout/sections/community";
 import { FAQSection } from "@/components/layout/sections/faq";
 import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
+import Navbar from "@/components/layout/sections/navbar";
 import { RegistrationSection } from "@/components/layout/sections/registration";
 import UpperHero from "@/components/layout/sections/upperhero";
 
@@ -28,6 +29,7 @@ export const metadata = {
 export default function Home() {
 	return (
 		<div className="space-y-20">
+			<Navbar />
 			<UpperHero />
 			<HeroSection />
 			<AchievementSection />
