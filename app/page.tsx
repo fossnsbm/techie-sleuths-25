@@ -4,6 +4,7 @@ import { FAQSection } from "@/components/layout/sections/faq";
 import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
 import Navbar from "@/components/layout/sections/navbar";
+import PastEventSection from "@/components/layout/sections/pastevent";
 import { RegistrationSection } from "@/components/layout/sections/registration";
 import UpperHero from "@/components/layout/sections/upperhero";
 
@@ -34,6 +35,7 @@ export default function Home() {
 			<HeroSection />
 			<AchievementSection />
 			<RegistrationSection />
+			<PastEventSection />
 			<CommunitySection />
 			<FAQSection />
 			<FooterSection />

@@ -51,7 +51,7 @@ export const FooterSection = () => {
 					<div className="flex flex-wrap justify-center gap-4 mt-8 md:mt-0">
 						{" "}
 						<a
-							href="https://icons8.com/icons/set/github"
+							href="https://x.com/fossnsbm"
 							className="flex items-center gap-2"
 						>
 							{" "}
@@ -62,7 +62,7 @@ export const FooterSection = () => {
 							/>
 						</a>{" "}
 						<a
-							href="https://icons8.com/icons/set/github"
+							href="https://www.linkedin.com/company/fossnsbm/posts/?feedView=all"
 							className="flex items-center gap-2"
 						>
 							{" "}
@@ -73,7 +73,7 @@ export const FooterSection = () => {
 							/>
 						</a>{" "}
 						<a
-							href="https://icons8.com/icons/set/github"
+							href="https://www.youtube.com/@fosscommunitynsbm"
 							className="flex items-center gap-2"
 						>
 							{" "}
@@ -84,7 +84,7 @@ export const FooterSection = () => {
 							/>
 						</a>{" "}
 						<a
-							href="https://icons8.com/icons/set/github"
+							href="https://www.facebook.com/foss.nsbm/"
 							className="flex items-center gap-2"
 						>
 							{" "}
@@ -95,7 +95,7 @@ export const FooterSection = () => {
 							/>
 						</a>{" "}
 						<a
-							href="https://icons8.com/icons/set/github"
+							href="https://blog.fossnsbm.org/"
 							className="flex items-center gap-2"
 						>
 							{" "}
@@ -106,7 +106,7 @@ export const FooterSection = () => {
 							/>
 						</a>{" "}
 						<a
-							href="https://icons8.com/icons/set/github"
+							href="https://www.instagram.com/fossnsbm/?hl=en"
 							className="flex items-center gap-2"
 						>
 							{" "}
