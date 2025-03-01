@@ -53,17 +53,18 @@ export const RegistrationSection = () => {
        setMemberThree({ name: "", studentId: "" });
    }
 
-  async function submit() {
-    if (
-      teamName == "" ||
-      leaderName == "" ||
-      leaderContact == "" ||
-      leaderSid == "" ||
-      leaderEmail == ""
-    ) {
-      setError("Please fill in all required fields");
-      return;
-    }
+	async function submit() {
+		if (
+			teamName == "" ||
+			leaderName == "" ||
+			leaderContact == "" ||
+			leaderSid == "" ||
+			leaderEmail == ""
+		) {
+			setError("Please fill in all required fields");
+			return;
+		}
+
 
     if (leaderEmail.split("@")[1] != "students.nsbm.ac.lk") {
       setError("Please enter your NSBM email address");
@@ -96,6 +97,7 @@ export const RegistrationSection = () => {
       email: leaderEmail,
     };
 
+
 		try {
 			setPending(true);
 			await addDoc(collection(db, "teams"), {
@@ -113,6 +115,7 @@ export const RegistrationSection = () => {
 			setError((e != null && e.toString && e.toString()) || "Unknown error");
 		}
 	}
+
 
   useEffect(() => {
     if (error) {
