@@ -37,10 +37,21 @@ export const RegistrationSection = () => {
   const [error, setError] = useState("");
   const [pending, setPending] = useState(false);
 
-  const hasTimedOut = useMemo(() => {
-    let diff = new Date("2025-03-04T00:00:00").getTime() - Date.now();
-    return diff <= 0;
-  }, []);
+	const hasTimedOut = useMemo(() => {
+		let diff = new Date("2025-03-04T00:00:00").getTime() - Date.now();
+		return diff <= 0;
+	}, []);
+
+   async function reset() {
+       setTeamName("");
+       setLeaderName("");
+       setLeaderContact("");
+       setLeaderSid("");
+       setLeaderEmail("");
+       setMemberOne({ name: "", studentId: "" });
+       setMemberTwo({ name: "", studentId: "" });
+       setMemberThree({ name: "", studentId: "" });
+   }
 
   async function submit() {
     if (
@@ -85,22 +96,23 @@ export const RegistrationSection = () => {
       email: leaderEmail,
     };
 
-    try {
-      setPending(true);
-      await addDoc(collection(db, "teams"), {
-        name: teamName,
-        leader,
-        members,
-      });
-      setPending(false);
-      setError("");
-      document.getElementById("success")!.showPopover();
-    } catch (e) {
-      console.error(e);
-      setPending(false);
-      setError((e != null && e.toString && e.toString()) || "Unknown error");
-    }
-  }
+		try {
+			setPending(true);
+			await addDoc(collection(db, "teams"), {
+				name: teamName,
+				leader,
+				members,
+			});
+			setPending(false);
+			setError("");
+            reset();
+			document.getElementById("success")!.showPopover();
+		} catch (e) {
+			console.error(e);
+			setPending(false);
+			setError((e != null && e.toString && e.toString()) || "Unknown error");
+		}
+	}
 
   useEffect(() => {
     if (error) {
