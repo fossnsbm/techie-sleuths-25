@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const target = new Date("2025-03-04T00:00:00");
+const target = new Date("2025-03-05T00:00:00");
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;

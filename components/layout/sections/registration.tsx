@@ -38,7 +38,7 @@ export const RegistrationSection = () => {
   const [pending, setPending] = useState(false);
 
 	const hasTimedOut = useMemo(() => {
-		let diff = new Date("2025-03-04T00:00:00").getTime() - Date.now();
+		let diff = new Date("2025-03-05T00:00:00").getTime() - Date.now();
 		return diff <= 0;
 	}, []);
 
