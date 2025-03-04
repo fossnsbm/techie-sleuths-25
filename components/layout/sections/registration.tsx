@@ -143,7 +143,7 @@ export const RegistrationSection = () => {
             Register
           </CardHeader>
           <CardContent
-            className={hasTimedOut ? "pointer-events-none opacity-50" : ""}
+            className="pointer-events-none opacity-50"
           >
             <div className="flex flex-col gap-4">
               <Input
